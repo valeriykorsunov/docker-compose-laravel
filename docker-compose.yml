@@ -16,6 +16,7 @@ services:
       - "80:80"
     volumes:
       - ./src:/var/www/html:delegated
+      - ./dockerfiles/nginx/default.conf:/etc/nginx/conf.d/default.conf:delegated
     depends_on:
       - php
       - redis
@@ -26,6 +27,8 @@ services:
 
   mysql:
     image: mariadb:10.6
+    volumes:
+      - './data/mysql:/var/lib/mysql'
     restart: unless-stopped
     tty: true
     ports:
