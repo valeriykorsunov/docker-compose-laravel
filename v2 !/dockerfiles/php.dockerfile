@@ -1,5 +1,5 @@
 ARG PHP_VERSION
-FROM php:${PHP_VERSION}-fpm
+FROM php:${PHP_VERSION}-fpm-alpine
 
 ARG UID
 ARG GID

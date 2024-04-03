@@ -76,6 +76,7 @@ services:
       args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
+        - PHP_VERSION=${PHP_VERSION}
     volumes:
       - ./src:/var/www/html
     depends_on:
@@ -105,6 +106,7 @@ services:
       args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
+        - PHP_VERSION=${PHP_VERSION}
     volumes:
       - ./src:/var/www/html:delegated
     depends_on:
