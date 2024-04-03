@@ -46,7 +46,7 @@ services:
   php:
     build:
       context: ./dockerfiles
-      dockerfile: php.dockerfile
+      dockerfile: ${PHP_VERSION}.dockerfile
       args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
@@ -68,7 +68,7 @@ services:
   composer:
     build:
       context: ./dockerfiles
-      dockerfile: php.dockerfile
+      dockerfile: ${PHP_VERSION}.dockerfile
       args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
@@ -96,7 +96,7 @@ services:
   artisan:
     build:
       context: ./dockerfiles
-      dockerfile: php.dockerfile
+      dockerfile: ${PHP_VERSION}.dockerfile
       args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}

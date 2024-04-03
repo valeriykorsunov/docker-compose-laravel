@@ -103,6 +103,7 @@ docker-compose run --rm composer create-project laravel/laravel .
 
 # Список изменений
 - [x] Локализовать БД проекта
-- [ ] Добавить свои сборки для версий PHP
+- [x] Добавить свои dockerfile для разных версий PHP
 - [x] Локализовать настройки php и nginx
-- [ ] 
+- [ ] Настроить xdebug
+- [ ] Вынести выбор версии php в переменные
